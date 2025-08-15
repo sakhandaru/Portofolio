@@ -1,11 +1,25 @@
-import { ModeToggle } from "@/components/toggle-dark";
+import { MarqueeDemo } from "@/components/experience";
+import Hero from "@/components/hero";
+import { Meteors } from "@/components/magicui/meteors";
+import { About } from "@/components/about";
+
+import { SmoothCursor } from "@/components/magicui/smooth-cursor";
+import { Globe } from "lucide-react";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
+import Projects from "@/components/project";
+import ContactMe from "@/components/contact";
 
 export default function Home() {
     return (
-        <div className="p-4">
-            <h1 className="text-xl font-bold mb-2">Home</h1>
-            <p>This is the home page.</p>
-            <ModeToggle />
-        </div>
+        <>
+            <ScrollProgress className="top" />  
+            <div className="cursor-none"><SmoothCursor /></div> 
+
+            
+            <Hero /> 
+            <About />      
+            <Projects />
+            <ContactMe />
+        </>
     );
 }
