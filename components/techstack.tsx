@@ -23,7 +23,7 @@ const techIcons = [
 
 export function DockDemo() {
   return (
-    <div className="relative pt-10">
+    <div className="relative bg-gray-100 dark:bg-black mt-16">
       <Dock direction="middle">
         {techIcons.map((icon) => (
           <DockIcon key={icon.name}>

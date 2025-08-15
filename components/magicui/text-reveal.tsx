@@ -2,7 +2,6 @@
 
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 import { ComponentPropsWithoutRef, FC, ReactNode, useRef } from "react";
-
 import { cn } from "@/lib/utils";
 import { MarqueeDemo } from "../experience";
 import { DockDemo } from "../techstack";
@@ -27,10 +26,10 @@ export const TextReveal: FC<TextRevealProps> = ({ title, children, className }) 
   return (
     <div ref={targetRef} className={cn("relative z-0 h-[120vh]", className)}>
       <div
-        className={
-          "sticky top-0 mx-auto flex items-center justify-center h-screen bg-gray-100 dark:bg-black px-[1rem] py-[2rem]"
-        }
-      >
+    className={
+      "sticky top-5 mx-auto flex items-center justify-center h-screen bg-gray-100 dark:bg-black px-[1rem] py-[2rem]"
+    }
+  >
         {/* Container untuk judul dan paragraf agar sejajar */}
         <div className="w-full max-w-6xl">
           {/* Judul */}
@@ -59,7 +58,7 @@ export const TextReveal: FC<TextRevealProps> = ({ title, children, className }) 
             </span>
           </div>
           <MarqueeDemo />
-          <DockDemo />
+           <DockDemo />
         </div>
       </div>
     </div>

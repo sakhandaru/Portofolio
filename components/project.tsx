@@ -52,7 +52,10 @@ export default function Project() {
   ];
 
   return (
-    <section className="bg-white text-neutral-900 dark:bg-black dark:text-white py-16 px-4 transition-colors duration-300">
+    <section id="projects" className="bg-gray-100 text-neutral-900 dark:bg-black dark:text-white py-16 px-4 transition-colors duration-300">
+      <h2 className="max-w-6xl mx-auto text-md font-bold text-black dark:text-white md:text-1xl lg:text-2xl mb-8">
+        My Projects
+      </h2>
       <div className="max-w-6xl mx-auto space-y-20">
         {projects.map((project, index) => (
           <div
@@ -61,11 +64,11 @@ export default function Project() {
           >
             <div className="relative h-full">
               {project.tag && (
-                <span className="absolute top-3 left-3 bg-neutral-200/80 text-neutral-700 dark:bg-neutral-800/80 dark:text-neutral-300 text-xs px-3 py-1 rounded-full">
+                <span className="absolute top-3 left-3 bg-neutral-300/80 text-neutral-700 dark:bg-neutral-800/80 dark:text-neutral-300 text-xs px-3 py-1 rounded-full">
                   {project.tag}
                 </span>
               )}
-              <div className="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-xl h-full flex items-center justify-center transition-colors duration-300">
+              <div className="bg-neutral-200 dark:bg-neutral-900 p-4 rounded-xl h-full flex items-center justify-center transition-colors duration-300">
                 <Image
                   src={project.image}
                   alt={project.title}
