@@ -27,7 +27,7 @@ export function DockDemo() {
       {/* Wrapper biar bisa swipe di mobile */}
       <div className="overflow-x-auto sm:overflow-visible">
         <div className="flex justify-center sm:block w-max sm:w-full px-4 sm:px-0">
-          <Dock direction="middle" className="gap-3 sm:gap-4 md:gap-6">
+          <Dock direction="middle" className="gap-2 sm:gap-2 md:gap-2">
             {techIcons.map((icon) => (
               <DockIcon key={icon.name}>
                 <Image

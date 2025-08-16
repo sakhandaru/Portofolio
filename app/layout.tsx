@@ -53,7 +53,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <SideNavbar/>
+            <SideNavbar />
             {children}
           </ThemeProvider>
       </body>
