@@ -4,9 +4,9 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import ContactMe from './contact';
-import { RuningText } from './runingtext';
-import Lanyard from './Lanyard/Lanyard';
+import ContactMe from './(main) contact';
+import { RuningText } from './runing-text';
+import Lanyard from './ui/Lanyard';
 
 gsap.registerPlugin(ScrollTrigger);
 

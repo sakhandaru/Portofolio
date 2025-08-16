@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import SideNavbar from "@/components/sidenavbar";
+import SideNavbar from "@/components/side-navbar";
 import { Raleway, Montserrat } from 'next/font/google';
 import './globals.css'; // Pastikan file CSS global Anda diimpor
 

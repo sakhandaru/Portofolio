@@ -1,11 +1,10 @@
-import { About } from "@/components/about";
+import { About } from "@/components/(main) about";
 import { SmoothCursor } from "@/components/magicui/smooth-cursor";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
-import Hero from "@/components/hero";
-import Projects from "@/components/project";
-import ContactMe from "@/components/contact";
-import ContactReveal from "@/components/ContactReveal";
-import Lanyard from "@/components/Lanyard/Lanyard";
+import Hero from "@/components/(main) hero";
+import Projects from "@/components/(main) project";
+import ContactReveal from "@/components/contact-reveal";
+
 
 export default function Home() {
     return (
@@ -16,9 +15,7 @@ export default function Home() {
             <Hero /> 
             <About />  
             <Projects />
-            <ContactReveal />
-            {/* <ContactMe /> */}
-            
+            <ContactReveal />            
         </>
     );
 }

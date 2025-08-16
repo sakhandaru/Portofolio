@@ -90,7 +90,7 @@ export function MarqueeDemo() {
   return (
     <>
       <h2 className="text-md font-bold text-black dark:text-white md:text-1xl lg:text-2xl mb-8">
-        My Experience
+        My Experience 🧳
       </h2>
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
 

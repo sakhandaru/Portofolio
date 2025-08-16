@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Meteors } from "./magicui/meteors";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import PhotoCircle from "./photoCircle";
+import PhotoCircle from "./photo-circle";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { ConfettiButton } from "./magicui/confetti";
 
@@ -34,7 +34,7 @@ export default function Hero() {
     <>
       <section
         ref={heroRef}
-        className="w-full min-h-screen flex items-center justify-center bg-transparent py-32 md:py-48 relative"
+        className="w-full min-h-screen flex items-center justify-center dark:bg-[#121212] bg-white py-32 md:py-48 relative"
       >
         
         <div className="container mx-auto flex max-w-3xl flex-col items-center text-center relative z-10">
