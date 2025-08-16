@@ -15,7 +15,7 @@ function PreviousSection() {
   return (
     <div className="bg-gray-100 text-gray-800 dark:bg-black dark:text-gray-100 flex flex-col justify-center items-center p-10">
       <RuningText />
-      <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]}  />
+      {/* <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]}  /> */}
     </div>
   );
 }
