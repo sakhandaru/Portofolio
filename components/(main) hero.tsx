@@ -4,9 +4,10 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Meteors } from "./magicui/meteors";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import PhotoCircle from "./photo-circle";
+
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { ConfettiButton } from "./magicui/confetti";
+import PhotoCircle from "./photo-circle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,14 +35,15 @@ export default function Hero() {
     <>
       <section
         ref={heroRef}
-        className="w-full min-h-screen flex items-center justify-center dark:bg-[#121212] bg-white py-32 md:py-48 relative"
+        className="w-full min-h-screen flex items-center justify-center bg-white dark:bg-[#121212] py-32 md:py-48 relative"
       >
         
         <div className="container mx-auto flex max-w-3xl flex-col items-center text-center relative z-10">
           <div className="flex items-center gap-4"> {/* Tambahkan wrapper flex ini */}
-            <h1 className="pointer-events-none whitespace-pre-wrap text-black dark:text-white bg-clip-text text-8xl font-semibold leading-none">
-              Hi dude!!
-            </h1>
+            <h1 className="pointer-events-none whitespace-pre-wrap text-black dark:text-white bg-clip-text 
+               text-6xl sm:text-6xl md:text-8xl font-semibold leading-none">
+  Hi dude!!
+</h1>
             <PhotoCircle />
 
           </div>

@@ -15,6 +15,7 @@ export const TextReveal: FC<TextRevealProps> = ({ title, children, className }) 
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    
   });
 
   if (typeof children !== "string") {
@@ -24,10 +25,14 @@ export const TextReveal: FC<TextRevealProps> = ({ title, children, className }) 
   const words = children.split(" ");
 
   return (
-    <div ref={targetRef} className={cn("relative z-0 h-[120vh]", className)}>
+    <div
+  ref={targetRef}
+  className={cn("relative z-0 h-[200vh] bg-gray-100 dark:bg-black", className)}
+>
+
       <div
     className={
-      "pt-60 sticky top-2 mx-auto flex items-center justify-center h-screen bg-gray-100 dark:bg-black px-[1rem] py-[2rem]"
+      "pt-60 sticky top-2 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
     }
   >
         {/* Container untuk judul dan paragraf agar sejajar */}

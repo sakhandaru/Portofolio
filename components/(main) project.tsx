@@ -36,7 +36,7 @@ export default function Project() {
     },
     {
       tag: "Challenge",
-      image: "/images/sneakers.png",
+      image: "/MacBook.png",
       title: "E-commerce product page",
       description:
         "Successfully crafted an engaging product page featuring a dynamic lightbox gallery and seamless cart functionality, showcasing proficiency in JavaScript development.",
@@ -53,7 +53,7 @@ export default function Project() {
 
   return (
     <section id="projects" className="bg-gray-100 text-neutral-900 dark:bg-black dark:text-white py-16 px-4 transition-colors duration-300">
-      <h2 className="max-w-6xl mx-auto text-md font-bold text-black dark:text-white md:text-1xl lg:text-2xl mb-8">
+      <h2 className="max-w-6xl mx-auto text-md font-bold text-black dark:text-white md:text-1xl lg:text-2xl mb-8 ">
         My Projects 🧑‍💻
       </h2>
       <div className="max-w-6xl mx-auto space-y-20">

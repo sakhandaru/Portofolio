@@ -176,3 +176,10 @@ p {
 .gsap-reveal-container {
   visibility: hidden;
 }
+
+/* globals.css */
+@media (max-width: 768px) {
+  .cursor-none {
+    display: none !important;
+  }
+}

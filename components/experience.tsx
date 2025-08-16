@@ -1,9 +1,5 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import { title } from "process";
-import { p } from "framer-motion/client";
-
-
 
 const workExperience = [
   {

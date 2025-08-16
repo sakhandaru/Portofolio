@@ -21,45 +21,40 @@ export default function SideNavbar() {
   ];
 
   return (
-    
-<div className="fixed right-0 top-0 h-full w-[50px] z-50 group">
-  {/* Area Hover (transparan) */}
-  
-  {/* Navbar asli */}
-  <div
-    className={`
-      absolute right-0 top-1/2 -translate-y-1/2
-      flex flex-col justify-between
-      shadow-lg transition-transform duration-300
-      translate-x-[70%] group-hover:translate-x-0
-      ${theme === "dark" ? "bg-white text-black" : "bg-black text-white"}
-    `}
-  >
-    {/* isi navbar */}
+    <div className="fixed right-0 top-0 h-full w-[50px] z-50 group">
+      <div
+        className={`
+          absolute right-0 top-1/2 -translate-y-1/2
+          flex flex-col justify-between
+          shadow-lg transition-transform duration-300
+          ${theme === "dark" ? "bg-white text-black" : "bg-black text-white"}
+          md:translate-x-[70%] md:group-hover:translate-x-0
+        `}
+      >
+        {/* Navigation Icons */}
+        <div className="flex flex-col items-center space-y-4 p-2">
+          {navItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="p-2 hover:opacity-70 transition"
+            >
+              {item.icon}
+            </Link>
+          ))}
+        </div>
 
-      {/* Navigation Icons */}
-      <div className="flex flex-col items-center space-y-4 p-2">
-        {navItems.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
+        {/* Dark Mode Toggle */}
+        <div className="p-2 flex justify-center">
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 hover:opacity-70 transition"
           >
-            {item.icon}
-          </Link>
-        ))}
-      </div>
-
-      {/* Dark Mode Toggle */}
-      <div className="p-2 flex justify-center">
-        <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="p-2 hover:opacity-70 transition"
-        >
-          {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
-        </button>
+            {mounted &&
+              (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
+          </button>
+        </div>
       </div>
     </div>
-      </div>
   );
 }
