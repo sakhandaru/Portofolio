@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import SideNavbar from "@/components/side-navbar";
@@ -20,11 +20,6 @@ const montserrat = Montserrat({
   weight: ['300', '400', '500', '700'], // Muat bobot yang diperlukan untuk teks
   variable: '--font-montserrat', // Nama variabel CSS
   display: 'swap',
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({

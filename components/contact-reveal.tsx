@@ -8,6 +8,7 @@ import ContactMe from './(main) contact';
 import { RuningText } from './runing-text';
 import Lanyard from './ui/Lanyard';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 function PreviousSection() {
