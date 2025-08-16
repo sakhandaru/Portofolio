@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   title: "sakhandaru-portfolio",
   description: "personal-portofolio",
   icons: {
-    icon: "/logo5.png",
+    icon: "/logo-2.ico",
   },
 };
 
