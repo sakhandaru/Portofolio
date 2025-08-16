@@ -23,8 +23,8 @@ import * as THREE from "three";
 // replace with your own imports, see the usage snippet for details
 // const cardGLB = "./card.glb";
 // const lanyard = "./lanyard.png";
-const cardGLB = '/assets/lanyard/card (1).glb';
-const lanyard = '/assets/lanyard/lanyard.png';
+const cardGLB = '/assets/lanyard/Card.glb';
+const lanyard = '/assets/lanyard/Lanyard.png';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
