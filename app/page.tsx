@@ -1,8 +1,29 @@
-export default function AboutPage() {
+
+
+import { About } from "@/components/(main) about";
+import { SmoothCursor } from "@/components/magicui/smooth-cursor";
+import Hero from "@/components/(main) hero";
+import Projects from "@/components/(main) project";
+import ContactReveal from "@/components/contact-reveal";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
+
+
+export default function Home() {
+  
+
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold mb-2">About</h1>
-      <p>This is the about page.</p>
-    </div>
+    <>
+    
+      <div id="hero"></div>
+      <ScrollProgress className="top" />
+      <div className="hidden sm:block">
+      <SmoothCursor />
+      </div>
+
+      <Hero />
+      <About />  
+      <Projects />
+      <ContactReveal />
+    </>
   );
 }
