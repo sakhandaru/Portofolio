@@ -1,3 +1,5 @@
+"use client";
+
 import { SmoothCursor } from "@/components/magicui/smooth-cursor";
  
 export function SmoothCursorDemo() {

@@ -1,3 +1,4 @@
+"use client";
 // src/components/project.tsx
 import { ArrowUpRight, Github } from "lucide-react";
 import Image from "next/image";

@@ -1,3 +1,5 @@
+"use client";
+
 import { TextReveal } from "@/components/magicui/text-reveal";
 import { h1 } from "framer-motion/client";
 import { MarqueeDemo } from "./experience";

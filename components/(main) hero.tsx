@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { Meteors } from "./magicui/meteors";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { WordRotate } from "@/components/magicui/word-rotate";
