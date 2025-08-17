@@ -11,11 +11,14 @@ export interface TextRevealProps extends ComponentPropsWithoutRef<"div"> {
   children: string;
 }
 
-export const TextReveal: FC<TextRevealProps> = ({ title, children, className }) => {
+export const TextReveal: FC<TextRevealProps> = ({
+  title,
+  children,
+  className,
+}) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    
   });
 
   if (typeof children !== "string") {
@@ -26,15 +29,17 @@ export const TextReveal: FC<TextRevealProps> = ({ title, children, className }) 
 
   return (
     <div
-  ref={targetRef}
-  className={cn("relative z-0 h-[200vh] bg-gray-100 dark:bg-black", className)}
->
-
+      ref={targetRef}
+      className={cn(
+        "relative z-0 h-[200vh] bg-gray-100 dark:bg-black",
+        className
+      )}
+    >
       <div
-    className={
-      "pt-60 sticky top-2 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
-    }
-  >
+        className={
+          "pt-60 sticky top-2 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
+        }
+      >
         {/* Container untuk judul dan paragraf agar sejajar */}
         <div className="w-full max-w-6xl">
           {/* Judul */}
