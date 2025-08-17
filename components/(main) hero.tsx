@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react"; // 1. Import useState
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,11 +14,13 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement | null>(null);
 
-  // 2. Buat state untuk posisi stiker, awalnya null
-  const [stickerPositionTopRight, setStickerPositionTopRight] = useState<{x: number; y: number} | null>(null);
-  const [stickerPositionBottomLeft, setStickerPositionBottomLeft] = useState<{x: number; y: number} | null>(null);
+  // State untuk menyimpan posisi stiker, awalnya null agar tidak error di server
+  const [stickerPositions, setStickerPositions] = useState<{
+    stickerBawah: { x: number; y: number } | null;
+    stickerAtas: { x: number; y: number } | null;
+  }>({ stickerBawah: null, stickerAtas: null });
 
-  // Efek untuk ScrollTrigger
+  // Efek untuk ScrollTrigger (tidak diubah)
   useEffect(() => {
     if (!heroRef.current) return;
 
@@ -36,37 +38,92 @@ export default function Hero() {
     };
   }, []);
 
-  // 3. Efek BARU untuk menghitung posisi stiker HANYA di client
   useEffect(() => {
-    // Kode ini hanya berjalan di browser, jadi aman mengakses 'window'
-    const topRight = { x: window.innerWidth - 140, y: 20 };
-    const bottomLeft = { x: 20, y: window.innerHeight - 170 };
+    const handleResize = () => {
+  if (window.innerWidth <= 768) {
+    // MOBILE
+    setStickerPositions({
+      stickerAtas: { 
+        x: 0,
+        y: - 250
+      },
+      stickerBawah: { 
+        x: 0,
+        y: 230
+      },
+    });
+  } else if (769 <= window.innerWidth && window.innerWidth <= 1024) {
+    // TABLET
+    setStickerPositions({
+      stickerAtas: { 
+        x: -350, 
+        y: -200 
+      },
+      stickerBawah: { 
+        x: 400, 
+        y: 200 
+      },
+    });
+  } else if (1025 <= window.innerWidth && window.innerWidth <= 1440) {
+    // DESKTOP KECIL
+    setStickerPositions({
+      stickerAtas: { 
+        x: -350, 
+        y: -200 
+      },
+      stickerBawah: { 
+        x: 400, 
+        y: 200 
+      },
+    });
+  } else {
+    // DESKTOP BESAR
+    setStickerPositions({
+      stickerAtas: { 
+        x: -350, 
+        y: -200
+      },
+      stickerBawah: { 
+        x: 400, 
+        y: 200
+      },
+    });
+  }
+};
 
-    setStickerPositionTopRight(topRight);
-    setStickerPositionBottomLeft(bottomLeft);
+
+    // Panggil sekali saat komponen dimuat
+    handleResize();
+
+    // Tambahkan listener untuk dijalankan setiap kali ukuran jendela berubah
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup: Hapus listener saat komponen tidak lagi digunakan
+    return () => window.removeEventListener("resize", handleResize);
   }, []); // Dependensi kosong agar hanya berjalan sekali saat komponen mount
 
   return (
     <>
       <section
         ref={heroRef}
-        className="w-full min-h-screen flex items-center justify-center bg-white dark:bg-[#121212] py-32 md:py-48 relative"
+        className="w-full min-h-screen flex items-center justify-center bg-white dark:bg-[#121212] py-32 md:py-48 relative overflow-hidden" // Tambahkan overflow-hidden
       >
-        {/* 4. Render stiker secara kondisional */}
-        {stickerPositionTopRight && (
+        {/* Render stiker kanan atas secara kondisional dengan posisi dari state */}
+        {stickerPositions.stickerBawah && (
           <StickerBounce
             imageSrc="/sticker2.svg"
-            width={300}
-            initialPosition={{ x: 450, y: 200 }}
+            width={350}
+            initialPosition={stickerPositions.stickerBawah} // <-- MENGGUNAKAN STATE
             className="z-10"
           />
         )}
 
-        {stickerPositionBottomLeft && (
+        {/* Render stiker kiri bawah secara kondisional dengan posisi dari state */}
+        {stickerPositions.stickerAtas && (
           <StickerBounce
             imageSrc="/sticker1.svg"
             width={350}
-            initialPosition={{ x: -380, y: -200 }}
+            initialPosition={stickerPositions.stickerAtas} // <-- MENGGUNAKAN STATE
             className="z-10"
           />
         )}
@@ -81,7 +138,7 @@ export default function Hero() {
             >
               Hi dude!!
             </h1>
-            
+            {/* <p>{window.innerWidth}</p> */}
           </div>
           <ConfettiButton>
             <WordRotate

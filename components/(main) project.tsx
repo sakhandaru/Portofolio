@@ -1,5 +1,5 @@
 "use client";
-// src/components/project.tsx
+
 import { ArrowUpRight, Github } from "lucide-react";
 import Image from "next/image";
 
@@ -53,36 +53,44 @@ export default function Project() {
   ];
 
   return (
-    <section id="projects" className="bg-gray-100 text-neutral-900 dark:bg-black dark:text-white py-16 px-4 transition-colors duration-300">
-      <h2 className="max-w-6xl mx-auto text-md font-bold text-black dark:text-white md:text-1xl lg:text-2xl mb-8 ">
+    <section
+      id="projects"
+      className="bg-gray-100 text-neutral-900 dark:bg-black dark:text-white py-16 px-4 transition-colors duration-300"
+    >
+      <h2 className="max-w-6xl mx-auto text-md font-bold text-black dark:text-white md:text-xl lg:text-2xl mb-8">
         My Projects 🧑‍💻
       </h2>
+
       <div className="max-w-6xl mx-auto space-y-20">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="grid md:grid-cols-2 gap-8 items-center"
+            className="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-8 md:items-center"
           >
-            <div className="relative h-full">
+            {/* Gambar */}
+            <div className="relative">
               {project.tag && (
                 <span className="absolute top-3 left-3 bg-neutral-300/80 text-neutral-700 dark:bg-neutral-800/80 dark:text-neutral-300 text-xs px-3 py-1 rounded-full">
                   {project.tag}
                 </span>
               )}
-              <div className="bg-neutral-200 dark:bg-neutral-900 p-4 rounded-xl h-full flex items-center justify-center transition-colors duration-300">
+              <div className="bg-neutral-200 dark:bg-neutral-900 p-4 rounded-xl flex items-center justify-center transition-colors duration-300">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={600}
                   height={400}
-                  className="rounded-md"
+                  className="rounded-md w-full h-auto object-contain"
                 />
               </div>
             </div>
 
+            {/* Teks */}
             <div>
-              <h2 className="text-2xl font-semibold mb-4">{project.title}</h2>
-              <p className="text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed">
+              <h2 className="text-xl md:text-2xl font-semibold mb-4">
+                {project.title}
+              </h2>
+              <p className="text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed text-sm md:text-base">
                 {project.description}
               </p>
 

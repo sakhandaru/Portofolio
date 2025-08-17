@@ -10,7 +10,6 @@ export function About() {
         With a focus on performance and user experience, I enjoy turning ideas into functional, visually engaging web applications. Currently, I’m building projects that combine aesthetic design with smooth animations, while learning cloud technologies to prepare for the next decade of tech.
         When I’m not coding, I’m exploring new design trends, learning cutting-edge tools, or experimenting with UI/UX concepts.
       </TextReveal>
-      
     </div>
     </>
   );
