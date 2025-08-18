@@ -19,7 +19,7 @@ const techIcons = [
   { name: "Elysia", src: "/icon/Elysia.svg" },
   { name: "Docker", src: "/icon/docker.svg" },
   { name: "npm", src: "/icon/npm.svg" },
-  { name: "Node.js", src: "/icon/node.svg" },
+  { name: "Node.js", src: "/icon/Node.svg" },
   { name: "Jest", src: "/icon/jest2.svg" },
   { name: "Git", src: "/icon/git.svg" },
   { name: "Figma", src: "/icon/figma.svg" },
