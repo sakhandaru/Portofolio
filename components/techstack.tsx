@@ -19,7 +19,7 @@ const techIcons = [
   { name: "Elysia", src: "/icon/Elysia.svg" },
   { name: "Docker", src: "/icon/docker.svg" },
   { name: "npm", src: "/icon/npm.svg" },
-  { name: "Node.js", src: "/icon/Node.svg" },
+  { name: "Node.js", src: "/icon/node.svg" },
   { name: "Jest", src: "/icon/jest2.svg" },
   { name: "Git", src: "/icon/git.svg" },
   { name: "Figma", src: "/icon/figma.svg" },
@@ -28,7 +28,7 @@ const techIcons = [
 
 export function DockDemo() {
   return (
-    <div className="relative bg-gray-100 dark:bg-black mb-[5rem] md:mb-[1rem] lg:mb-[1rem] mt-10">
+    <div className="relative bg-gray-100 dark:bg-black mb-[5rem] sm:mb-[1rem] md:mb-[1rem] lg:mb-[0rem] xl:mb-[0rem] mt-10">
       {/* Wrapper biar bisa swipe di mobile */}
       <div className="overflow-x-auto sm:overflow-visible">
         <div className="flex justify-center sm:block w-max sm:w-full px-4 sm:px-0">

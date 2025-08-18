@@ -131,6 +131,7 @@ export default function Hero() {
         <div className="container mx-auto flex max-w-3xl flex-col items-center text-center relative z-10">
           <div className="flex items-center gap-4">
             {" "}
+            {/* <p>{window.innerWidth}</p> */}
             <PhotoCircle />
             <h1
               className="pointer-events-none whitespace-pre-wrap text-black dark:text-white bg-clip-text 
@@ -138,7 +139,7 @@ export default function Hero() {
             >
               Hi dude!!
             </h1>
-            {/* <p>{window.innerWidth}</p> */}
+            
           </div>
           <ConfettiButton>
             <WordRotate
