@@ -57,7 +57,7 @@ export default function Project() {
       id="projects"
       className="bg-gray-100 text-neutral-900 dark:bg-black dark:text-white py-16 px-4 transition-colors duration-300"
     >
-      <h2 className="max-w-6xl mx-auto text-md font-bold text-black dark:text-white md:text-xl lg:text-2xl mb-8">
+      <h2 className="max-w-6xl mx-auto text-2xl font-bold text-black dark:text-white md:text-3xl lg:text-4xl mb-8">
         My Projects 🧑‍💻
       </h2>
 

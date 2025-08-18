@@ -31,13 +31,13 @@ export const TextReveal: FC<TextRevealProps> = ({
     <div
       ref={targetRef}
       className={cn(
-        "relative z-0 h-[200vh] bg-gray-100 dark:bg-black",
+        "relative z-0 h-[200vh] bg-gray-100 dark:bg-black pt-7",
         className
       )}
     >
       <div
         className={
-          "pt-60 sticky top-2 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
+          "pt-60 sticky top-7 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
         }
       >
         {/* Container untuk judul dan paragraf agar sejajar */}
