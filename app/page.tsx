@@ -4,6 +4,7 @@ import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import Hero from "@/components/(main) hero";
 import Projects from "@/components/(main) project";
 import ContactReveal from "@/components/contact-reveal";
+import { DockDemo } from "@/components/techstack";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
         <SmoothCursor />
       </div>
       <Hero />
-      <About />  
+      <About />
+      {/* <DockDemo />   */}
       <Projects />
       <ContactReveal />
     </>

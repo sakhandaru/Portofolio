@@ -61,7 +61,7 @@ export default function Project() {
         My Projects 🧑‍💻
       </h2>
 
-      <div className="max-w-6xl mx-auto space-y-20">
+      <div className="max-w-6xl mx-auto space-y-15">
         {projects.map((project, index) => (
           <div
             key={index}

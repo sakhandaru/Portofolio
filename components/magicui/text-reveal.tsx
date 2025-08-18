@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
-import { ComponentPropsWithoutRef, FC, ReactNode, useRef } from "react";
+import { ComponentPropsWithoutRef, FC, ReactNode, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { MarqueeDemo } from "../experience";
 import { DockDemo } from "../techstack";
@@ -11,33 +11,57 @@ export interface TextRevealProps extends ComponentPropsWithoutRef<"div"> {
   children: string;
 }
 
+
+
 export const TextReveal: FC<TextRevealProps> = ({
   title,
   children,
   className,
 }) => {
+  
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const calculateOffset = () => {
+      const viewportHeight = window.innerHeight;
+      setOffset(300 / viewportHeight); // Konversi 170px ke nilai 0-1
+    };
+    
+    calculateOffset();
+    window.addEventListener('resize', calculateOffset);
+    return () => window.removeEventListener('resize', calculateOffset);
+  }, []);
+
+  // Buat adjustedProgress dengan useTransform
+  const adjustedProgress = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, 1 + offset] // Tambahkan offset di ujung range
+  );
+
 
   if (typeof children !== "string") {
     throw new Error("TextReveal: children must be a string");
   }
 
   const words = children.split(" ");
+  
 
   return (
     <div
       ref={targetRef}
       className={cn(
-        "relative z-0 h-[200vh] bg-gray-100 dark:bg-black pt-7",
+        "relative z-0 h-[200vh] bg-gray-100 dark:bg-black pt-30 md:pt-20 lg:pt-20",
         className
       )}
     >
       <div
         className={
-          "pt-60 sticky top-7 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
+          "sticky top-30 md:top-20 lg:top-20 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
         }
       >
         {/* Container untuk judul dan paragraf agar sejajar */}
@@ -60,7 +84,7 @@ export const TextReveal: FC<TextRevealProps> = ({
                 const start = i / words.length;
                 const end = start + 1 / words.length;
                 return (
-                  <Word key={i} progress={scrollYProgress} range={[start, end]}>
+                  <Word key={i} progress={adjustedProgress} range={[start, end]}>
                     {word}
                   </Word>
                 );
