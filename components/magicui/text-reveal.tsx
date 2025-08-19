@@ -61,7 +61,7 @@ export const TextReveal: FC<TextRevealProps> = ({
     >
       <div
         className={
-          "sticky top-40 sm:top-30 md:top-16 lg:top-16 xl:top-16 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
+          "sticky top-40 sm:top-30 md:top-16 lg:top-14 xl:top-14 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
         }
       >
         {/* Container untuk judul dan paragraf agar sejajar */}
