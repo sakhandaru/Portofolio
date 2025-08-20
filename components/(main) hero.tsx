@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { ConfettiButton } from "./magicui/confetti";
 import PhotoCircle from "./photo-circle";

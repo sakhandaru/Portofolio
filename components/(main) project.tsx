@@ -12,11 +12,11 @@ export default function Project() {
         webm: "/project-demo/tvku-demo-kecil.webm",
         poster: "/project-demo/tvku-demo-thumbnail.jpg",
       },
-      title: "Promotional landing page for our favorite show",
+      title: "Landing Page TVKU",
       description:
-        "Teamed up with a designer to breathe life into a promotional webpage for our beloved show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated.",
+        "The TVKU Website is a modern, responsive web application built with Next.js, designed to deliver a seamless and engaging user experience for accessing TVKU’s content and services. Featuring server-side rendering and static site generation, it ensures fast performance, SEO optimization, and a user-friendly interface, showcasing proficiency in scalable web development with a focus on modern design and accessibility.",
       info: [
-        { label: "Year", value: "2023" },
+        { label: "Year", value: "2025" },
         { label: "Role", value: "Front-end Developer" },
       ],
       links: [
@@ -31,11 +31,11 @@ export default function Project() {
         webm: "/project-demo/chatbot-kecil.webm",
         poster: "/project-demo/chatbot-thumbnail.jpg",
       },
-      title: "Chatbot Kecil",
+      title: "Chatbot Ai Assistant",
       description:
-        "Membuat chatbot kecil untuk membantu pengguna menemukan informasi dengan cepat. Chatbot ini dirancang untuk memberikan jawaban yang relevan dan membantu pengguna dalam navigasi.",
+        "The TVKU AI Assistant Chatbot is an intelligent conversational tool developed to enhance user interaction with TVKU's services, built using modern AI frameworks. It provides real-time, personalized responses to user inquiries, seamlessly integrating with the TVKU platform to deliver information, support, and engagement. The chatbot leverages natural language processing to ensure intuitive communication, showcasing expertise in AI-driven solutions and user-centric design.",
       info: [
-        { label: "Year", value: "2023" },
+        { label: "Year", value: "2025" },
         { label: "Role", value: "Front-end Developer" },
       ],
       links: [
@@ -52,9 +52,9 @@ export default function Project() {
       },
       title: "Ezenda SaaS",
       description:
-        "Membuat chatbot kecil untuk membantu pengguna menemukan informasi dengan cepat. Chatbot ini dirancang untuk memberikan jawaban yang relevan dan membantu pengguna dalam navigasi.",
+        "Ezenda is a smart SaaS POS solution designed to simplify service booking management for providers like salons, spas, or clinics, featuring an intuitive interface and customizable tools tailored to your business needs—from appointment scheduling to payment and stock tracking, all within a modern dashboard.",
       info: [
-        { label: "Year", value: "2023" },
+        { label: "Year", value: "2025" },
         { label: "Role", value: "Front-end Developer" },
       ],
       links: [
@@ -71,7 +71,7 @@ export default function Project() {
       },
       title: "Ezenda Template",
       description:
-        "Membuat chatbot kecil untuk membantu pengguna menemukan informasi dengan cepat. Chatbot ini dirancang untuk memberikan jawaban yang relevan dan membantu pengguna dalam navigasi.",
+        "MEzenda is a versatile SaaS POS platform designed to streamline service booking management for providers like salons, spas, or clinics, offering a customizable, intuitive dashboard that adapts to your business—managing appointments, payments, and inventory with ease, all tailored to enhance your operational efficiency.",
       info: [
         { label: "Year", value: "2023" },
         { label: "Role", value: "Front-end Developer" },
