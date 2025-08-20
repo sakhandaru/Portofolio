@@ -14,7 +14,7 @@ export default function Project() {
       },
       title: "Landing Page TVKU",
       description:
-        "The TVKU Website is a modern, responsive web application built with Next.js, designed to deliver a seamless and engaging user experience for accessing TVKU’s content and services. Featuring server-side rendering and static site generation, it ensures fast performance, SEO optimization, and a user-friendly interface, showcasing proficiency in scalable web development with a focus on modern design and accessibility.",
+        "A modern, responsive landing page for TVKU, built with Next.js to ensure fast performance and SEO. It's designed for a seamless user experience, focusing on modern design and accessibility.",
       info: [
         { label: "Year", value: "2025" },
         { label: "Role", value: "Front-end Developer" },
@@ -33,7 +33,7 @@ export default function Project() {
       },
       title: "Chatbot Ai Assistant",
       description:
-        "The TVKU AI Assistant Chatbot is an intelligent conversational tool developed to enhance user interaction with TVKU's services, built using modern AI frameworks. It provides real-time, personalized responses to user inquiries, seamlessly integrating with the TVKU platform to deliver information, support, and engagement. The chatbot leverages natural language processing to ensure intuitive communication, showcasing expertise in AI-driven solutions and user-centric design.",
+        "An intelligent AI chatbot for the TVKU platform, designed to boost user engagement with real-time, personalized support. It leverages modern AI and NLP to create an intuitive, user-centric experience.",
       info: [
         { label: "Year", value: "2025" },
         { label: "Role", value: "Front-end Developer" },
@@ -52,7 +52,7 @@ export default function Project() {
       },
       title: "Ezenda SaaS",
       description:
-        "Ezenda is a smart SaaS POS solution designed to simplify service booking management for providers like salons, spas, or clinics, featuring an intuitive interface and customizable tools tailored to your business needs—from appointment scheduling to payment and stock tracking, all within a modern dashboard.",
+        "A smart SaaS POS solution for service businesses like salons or clinics. It simplifies booking, payment, and inventory management with an intuitive, customizable dashboard designed to streamline operations.",
       info: [
         { label: "Year", value: "2025" },
         { label: "Role", value: "Front-end Developer" },
@@ -71,7 +71,26 @@ export default function Project() {
       },
       title: "Ezenda Template",
       description:
-        "MEzenda is a versatile SaaS POS platform designed to streamline service booking management for providers like salons, spas, or clinics, offering a customizable, intuitive dashboard that adapts to your business—managing appointments, payments, and inventory with ease, all tailored to enhance your operational efficiency.",
+        "A versatile SaaS POS template for service-based businesses like salons or clinics. It features a customizable dashboard to manage appointments, payments, and inventory, all designed to improve operational efficiency.",
+      info: [
+        { label: "Year", value: "2023" },
+        { label: "Role", value: "Front-end Developer" },
+      ],
+      links: [
+        { label: "Live Demo", icon: <ArrowUpRight size={16} />, href: "#" },
+        { label: "See on GitHub", icon: <Github size={16} />, href: "#" },
+      ],
+    },
+    {
+      tag: "Conceptual Work",
+      video: {
+        mp4: "/project-demo/compress-small.mp4",
+        webm: "/project-demo/compress-small.webm",
+        poster: "/project-demo/compress-thumbnail.jpg",
+      },
+      title: "Compress CLI",
+      description:
+        "Compress CLI is a command-line tool designed to optimize and compress files efficiently, making it easier for developers to manage their assets and improve application performance.",
       info: [
         { label: "Year", value: "2023" },
         { label: "Role", value: "Front-end Developer" },
