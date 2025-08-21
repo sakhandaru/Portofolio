@@ -104,6 +104,7 @@ export default function Hero() {
   return (
     <>
       <section
+        
         ref={heroRef}
         className="w-full min-h-screen flex items-center justify-center bg-white dark:bg-[#121212] py-32 md:py-48 relative overflow-hidden" // Tambahkan overflow-hidden
       >

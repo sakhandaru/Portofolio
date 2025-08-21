@@ -83,7 +83,7 @@ export default function Navbar() {
               ))}
 
               {/* Desktop Social Accordion */}
-              <div className="flex flex-col items-center">
+              {/* <div className="flex flex-col items-center">
                 <button
                   onClick={() => setIsSocialDesktop(!isSocialDesktop)}
                   className="p-2 hover:opacity-70 transition"
@@ -108,7 +108,7 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -128,11 +128,11 @@ export default function Navbar() {
       {/* === MOBILE IOS DOCK NAVBAR === */}
       <div
         className={`
-          fixed bottom-4 left-1/2 -translate-x-1/2 z-50
+          fixed bottom-8 left-1/2 -translate-x-1/2 z-50
           flex items-center justify-evenly
-          w-[70%] max-w-md rounded-3xl py-4
+          w-[70%] max-w-md rounded-4xl py-4
           shadow-xl backdrop-blur-xl
-          ${theme === "dark" ? "bg-white/80 text-black" : "bg-black/70 text-white"}
+          ${theme === "dark" ? "bg-white text-black" : "bg-black text-white"}
           md:hidden
         `}
       >
