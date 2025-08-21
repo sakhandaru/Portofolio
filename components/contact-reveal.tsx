@@ -18,7 +18,6 @@ function PreviousSection() {
       <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
       <div className="flex flex-col items-center mt-8">
         <ArrowUp className="animate-bounce mt-2" />
-        <p>Swipe slowly</p>
       </div>
     </div>
   );
