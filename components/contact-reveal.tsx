@@ -1,13 +1,13 @@
 "use client";
 
-import { useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
-import ContactMe from './(main) contact';
-import { RuningText } from './runing-text';
-import Lanyard from './ui/Lanyard';
-
+import { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import ContactMe from "./(main) contact";
+import { RuningText } from "./runing-text";
+import Lanyard from "./ui/Lanyard";
+import { ArrowUp } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +15,11 @@ function PreviousSection() {
   return (
     <div className="bg-gray-100 text-gray-800 dark:bg-black dark:text-gray-100 flex flex-col justify-center items-center p-10">
       <RuningText />
-      <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]}  />
+      <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+      <div className="flex flex-col items-center mt-8">
+        <ArrowUp className="animate-bounce mt-2" />
+        <p>Swipe slowly</p>
+      </div>
     </div>
   );
 }

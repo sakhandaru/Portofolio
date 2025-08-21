@@ -1,12 +1,14 @@
 "use client";
 
-import { Home, User, Folder, Mail, Moon, Sun, Share2, X } from "lucide-react";
+import { Home, User, Folder, Mail, Moon, Sun, Share2,FolderGit2, X } from "lucide-react";
 import {
   FaInstagram,
   FaLinkedin,
   FaGithub,
   FaGitlab,
   FaWhatsapp,
+  FaRegFileCode,
+  FaRegUser,
 } from "react-icons/fa6";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
@@ -25,7 +27,7 @@ export default function Navbar() {
   const navItems = [
     { href: "#home", icon: <Home size={22} />, label: "Home" },
     { href: "#about", icon: <User size={22} />, label: "About" },
-    { href: "#projects", icon: <Folder size={22} />, label: "Projects" },
+    { href: "#projects", icon: <FolderGit2 size={22} />, label: "Projects" },
     { href: "#contact", icon: <Mail size={22} />, label: "Contact" },
   ];
 
@@ -66,7 +68,7 @@ export default function Navbar() {
             absolute right-0 top-1/2 -translate-y-1/2
             flex flex-col justify-between
             shadow-lg transition-all duration-300
-            ${theme === "dark" ? "bg-white text-black" : "bg-black text-white"}
+            dark:bg-white dark:text-black bg-black text-white
             md:translate-x-[70%] md:group-hover:translate-x-0
           `}
         >
@@ -83,7 +85,7 @@ export default function Navbar() {
               ))}
 
               {/* Desktop Social Accordion */}
-              {/* <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 <button
                   onClick={() => setIsSocialDesktop(!isSocialDesktop)}
                   className="p-2 hover:opacity-70 transition"
@@ -108,7 +110,7 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
 
@@ -130,9 +132,9 @@ export default function Navbar() {
         className={`
           fixed bottom-8 left-1/2 -translate-x-1/2 z-50
           flex items-center justify-evenly
-          w-[70%] max-w-md rounded-4xl py-4
+          w-[80%] max-w-md rounded-full py-6 
           shadow-xl backdrop-blur-xl
-          ${theme === "dark" ? "bg-white text-black" : "bg-black text-white"}
+          dark:bg-white dark:text-black bg-black text-white
           md:hidden
         `}
       >
@@ -169,7 +171,7 @@ export default function Navbar() {
           <div
             className={`
               flex flex-col space-y-6 p-6 rounded-2xl shadow-xl
-              ${theme === "dark" ? "bg-white text-black" : "bg-black text-white"}
+              dark:bg-white dark:text-black bg-black text-white
             `}
           >
             <div className="flex justify-between items-center">

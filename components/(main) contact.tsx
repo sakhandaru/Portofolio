@@ -11,11 +11,11 @@ import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative min-h-screen flex flex-col justify-between bg-black text-white dark:bg-white dark:text-black px-6 py-12">
+    <section className="relative min-h-screen flex flex-col justify-between bg-black text-white dark:bg-white dark:text-black px-6 py-12">
       {/* Top Section */}
-      <div className="lg:mt-36 mt-30 flex flex-col sm:flex-row justify-between gap-4 text-xs sm:text-sm font-light">
+      <div className="lg:mt-42 mt-32 flex flex-col sm:flex-row justify-between gap-4 text-xs sm:text-sm font-light">
         <div className="space-y-1 text-center sm:text-left">
-          <p>Web & App Developer</p>
+          <p id="contact" >Web & App Developer</p>
           <p>UI/UX, SaaS, Consultant</p>
         </div>
         <div className="text-center sm:text-right space-y-1">

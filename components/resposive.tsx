@@ -11,7 +11,7 @@ export default function Responsive() {
   bg-blue-100 rounded-lg
 ">
   <p>
-    Contoh teks dengan ukuran berbeda di setiap breakpoint:
+    rumus responsive
   </p>
   <ul className="list-disc pl-5">
     <li><strong>Default (&lt;640px):</strong> text-xs, p-2</li>
