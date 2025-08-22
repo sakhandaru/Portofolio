@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Dock, DockIcon } from "@/components/magicui/dock";
+import { Dock, DockIcon } from "@/components/ux/dock";
 
 const techIcons = [
   { name: "JavaScript", src: "/icon/js.svg" },

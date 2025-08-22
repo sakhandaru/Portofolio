@@ -1,6 +1,6 @@
 "use client";
 
-import { TextReveal } from "@/components/magicui/text-reveal";
+import { TextReveal } from "@/components/ux/text-reveal";
 
 export function About() {
   return (

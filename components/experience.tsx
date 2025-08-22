@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Marquee } from "@/components/magicui/marquee";
+import { Marquee } from "@/components/ux/marquee";
 // Impor ikon dari lucide-react sudah dihapus karena tidak lagi digunakan
 
 // Data pengalaman kerja dengan properti logoUrl untuk gambar

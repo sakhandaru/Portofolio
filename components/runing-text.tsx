@@ -2,7 +2,7 @@
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
-} from "@/components/magicui/scroll-based-velocity";
+} from "@/components/ux/scroll-based-velocity";
 
 export function RuningText() {
   return (
