@@ -77,7 +77,7 @@ export default function Project() {
         { label: "Role", value: "Front-end Developer" },
       ],
       links: [
-        { label: "Live Demo", icon: <ArrowUpRight size={16} />, href: "#" },
+        { label: "Live Demo", icon: <ArrowUpRight size={16} />, href: "#draft" },
         { label: "See on GitHub", icon: <Github size={16} />, href: "#" },
       ],
     },
