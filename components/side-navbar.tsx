@@ -1,18 +1,17 @@
 "use client";
 
-import { Home, User, Folder, Mail, Moon, Sun, Share2,FolderGit2, X } from "lucide-react";
+import { Home, User, Mail, Moon, Sun, Share2,FolderGit2, X } from "lucide-react";
 import {
   FaInstagram,
   FaLinkedin,
   FaGithub,
   FaGitlab,
   FaWhatsapp,
-  FaRegFileCode,
-  FaRegUser,
 } from "react-icons/fa6";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -25,10 +24,10 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { href: "#home", icon: <Home size={22} />, label: "Home" },
-    { href: "#about", icon: <User size={22} />, label: "About" },
-    { href: "#projects", icon: <FolderGit2 size={22} />, label: "Projects" },
-    { href: "#contact", icon: <Mail size={22} />, label: "Contact" },
+    { href: "/#hero", icon: <Home size={22} />, label: "Home" },
+    { href: "/#about", icon: <User size={22} />, label: "About" },
+    { href: "/#projects", icon: <FolderGit2 size={22} />, label: "Projects" },
+    { href: "/#contact", icon: <Mail size={22} />, label: "Contact" },
   ];
 
   const socialLinks = [
