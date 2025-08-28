@@ -17,7 +17,8 @@ export default function Hero() {
   const [stickerPositions, setStickerPositions] = useState<{
     stickerBawah: { x: number; y: number } | null;
     stickerAtas: { x: number; y: number } | null;
-  }>({ stickerBawah: null, stickerAtas: null });
+    stickerTengah: { x: number; y: number } | null;
+  }>({ stickerBawah: null, stickerAtas: null, stickerTengah: null });
 
   // Efek untuk ScrollTrigger (tidak diubah)
   useEffect(() => {
@@ -48,8 +49,12 @@ export default function Hero() {
       },
       stickerBawah: { 
         x: 0,
-        y: 230
+        y: -250
       },
+      stickerTengah: {
+        x: 0,
+        y: -250
+      }
     });
   } else if (769 <= window.innerWidth && window.innerWidth <= 1024) {
     // TABLET
@@ -62,6 +67,10 @@ export default function Hero() {
         x: 400, 
         y: 200 
       },
+      stickerTengah: {
+        x: -350,
+        y: 200
+      }
     });
   } else if (1025 <= window.innerWidth && window.innerWidth <= 1440) {
     // DESKTOP KECIL
@@ -74,6 +83,10 @@ export default function Hero() {
         x: 400, 
         y: 200 
       },
+      stickerTengah: {
+        x: -350,
+        y: 200
+      }
     });
   } else {
     // DESKTOP BESAR
@@ -86,6 +99,10 @@ export default function Hero() {
         x: 400, 
         y: 200
       },
+      stickerTengah: {
+        x: -350,
+        y: 200
+      }
     });
   }
 };
@@ -114,7 +131,7 @@ export default function Hero() {
             imageSrc="/sticker2.svg"
             width={350}
             initialPosition={stickerPositions.stickerBawah} // <-- MENGGUNAKAN STATE
-            className="z-10"
+            className="z-11"
           />
         )}
 
@@ -125,6 +142,14 @@ export default function Hero() {
             width={350}
             initialPosition={stickerPositions.stickerAtas} // <-- MENGGUNAKAN STATE
             className="z-10"
+          />
+        )}
+        {stickerPositions.stickerTengah && (
+          <StickerBounce
+            imageSrc="/sticker3.svg"
+            width={350}
+            initialPosition={stickerPositions.stickerTengah} // <-- MENGGUNAKAN STATE
+            className="z-12"
           />
         )}
 
@@ -146,16 +171,15 @@ export default function Hero() {
               className="text-2xl text-black dark:text-neutral-300 mt-4"
               words={[
                 "Welcome 🙌",
+                "Scroll now 👇",
+                "scroll slowly 🐢",
                 "click me 🤪",
                 "drag the sticker 🏷️",
-                "click me 🥸",
-                "⭐️✨💫🌟",
-                "🏃‍♂️🧑‍💻👳‍♀️👨‍🎓",
-                "mewing 🤫🧏‍♂️",
               ]}
             />
           </ConfettiButton>
         </div>
+        
       </section>
     </>
   );
