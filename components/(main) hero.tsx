@@ -148,7 +148,7 @@ export default function Hero() {
           <StickerBounce
             imageSrc="/sticker3.svg"
             width={350}
-            initialPosition={stickerPositions.stickerTengah} // <-- MENGGUNAKAN STATE
+            initialPosition={stickerPositions.stickerTengah} // <-- MENGGUNAKAN STATE2
             className="z-12"
           />
         )}
