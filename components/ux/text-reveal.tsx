@@ -77,7 +77,7 @@ export const TextReveal: FC<TextRevealProps> = ({
           <div className="max-w-7xl">
             <span
               className={
-                "pb-14 flex flex-wrap text-sm font-mono font-medium leading-relaxed text-black/20 dark:text-white/20 md:text-base lg:text-lg xl:text-xl"
+                "pb-14 flex flex-wrap text-sm font-mono font-medium leading-relaxed text-black/50 dark:text-white/70 md:text-base lg:text-lg xl:text-xl"
               }
             >
               {words.map((word, i) => {
