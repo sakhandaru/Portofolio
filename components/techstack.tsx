@@ -28,7 +28,7 @@ const techIcons = [
 
 export function DockDemo() {
   return (
-    <div className="relative bg-gray-100 dark:bg-black mb-[5rem] sm:mb-[1rem] md:mb-[1rem] lg:mb-[0rem] xl:mb-[0rem] mt-10">
+    <div className="relative bg-gray-100 dark:bg-black mb-[5rem] sm:mb-[1rem] md:mb-[1rem] lg:mb-[0rem] xl:mb-[0rem]">
       {/* Wrapper biar bisa swipe di mobile */}
       <div className="overflow-x-auto sm:overflow-visible">
         <div className="flex justify-center sm:block w-max sm:w-full px-4 sm:px-0">

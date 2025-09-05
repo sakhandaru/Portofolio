@@ -5,6 +5,7 @@ import Hero from "@/components/(main) hero";
 import Projects from "@/components/(main) project";
 import ContactReveal from "@/components/contact-reveal";
 import { DockDemo } from "@/components/techstack";
+import { MarqueeDemo } from "@/components/experience";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       </div>
       <Hero />
       <About />
+      {/* <DockDemo /> */}
       {/* <DockDemo />   */}
       <Projects />
       <ContactReveal />

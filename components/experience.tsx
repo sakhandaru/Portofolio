@@ -2,6 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ux/marquee";
+import { Button } from "./ui/button";
+import { ArrowUpRight } from "lucide-react";
 // Impor ikon dari lucide-react sudah dihapus karena tidak lagi digunakan
 
 // Data pengalaman kerja dengan properti logoUrl untuk gambar
@@ -130,10 +132,11 @@ const ReviewCard = ({
 export function MarqueeDemo() {
   return (
     <>
-      <h2 className="mb-8 text-2xl font-bold text-black dark:text-white md:text-3xl lg:text-4xl">
+      <h2 className="text-2xl font-bold text-black dark:text-white md:text-3xl lg:text-4xl mb-6">
         My Experience 🧳
       </h2>
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+  
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mb-10">
         <Marquee pauseOnHover className="[--duration:60s]">
           {workExperience.map((review) => (
             <ReviewCard key={review.title} {...review} />
@@ -142,6 +145,12 @@ export function MarqueeDemo() {
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-gray-100 to-transparent dark:from-black"></div>
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-gray-100 to-transparent dark:from-black"></div>
       </div>
+      <center>
+        <Button variant="outline" className="mb-6 rounded-full" onClick={() => window.location.href = "/about"}>
+          More about me <ArrowUpRight size={16} />
+      </Button>
+      </center>
+      
     </>
   );
 }

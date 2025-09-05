@@ -5,6 +5,9 @@ import { ComponentPropsWithoutRef, FC, ReactNode, useEffect, useRef, useState } 
 import { cn } from "@/lib/utils";
 import { MarqueeDemo } from "../experience";
 import { DockDemo } from "../techstack";
+import { Button } from "@/components/ui/button"
+import { ArrowUpRight } from "lucide-react";
+
 
 export interface TextRevealProps extends ComponentPropsWithoutRef<"div"> {
   title?: string;
@@ -55,29 +58,30 @@ export const TextReveal: FC<TextRevealProps> = ({
     <div
       ref={targetRef}
       className={cn(
-        "relative z-0 h-[200vh] bg-gray-100 dark:bg-black pt-40 sm:pt-30 md:pt-16 lg:pt-20 xl:pt-16",
-        className
+        "relative z-0 h-[200vh] bg-gray-100 dark:bg-black pt-32 sm:pt-28 md:pt-24 lg:pt-20 xl:pt-16",
       )}
     >
       <div
         className={
-          "sticky top-40 sm:top-30 md:top-16 lg:top-14 xl:top-14 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem]"
+          "sticky top-32 sm:top-28 md:top-24 lg:top-20 xl:top-16 mx-auto flex items-center justify-center h-screen  px-[1rem] py-[2rem] "
         }
       >
         {/* Container untuk judul dan paragraf agar sejajar */}
         <div className="w-full max-w-6xl">
           {/* Judul */}
           {title && (
-            <h2 className="text-3xl font-bold text-black dark:text-white md:text-4xl lg:text-5xl mb-8">
-              {title}
-            </h2>
+            <a href="/DraftTA" className="hover:underline">
+              <h2 className="text-3xl font-bold text-black dark:text-white md:text-4xl lg:text-5xl mb-6">
+                {title}
+              </h2>
+            </a>
           )}
 
           {/* Container paragraf dengan lebar yang dipersempit */}
           <div className="max-w-7xl">
             <span
               className={
-                "pb-14 flex flex-wrap text-sm font-mono font-medium leading-relaxed text-black/50 dark:text-white/70 md:text-base lg:text-lg xl:text-xl"
+                "flex flex-wrap text-sm font-mono font-medium leading-relaxed text-black/50 dark:text-white/70 md:text-base lg:text-lg xl:text-xl mb-10"
               }
             >
               {words.map((word, i) => {

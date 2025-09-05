@@ -2,6 +2,7 @@
 
 import { ArrowUpRight, Github } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 export default function Project() {
   const projects = [
@@ -103,15 +104,17 @@ export default function Project() {
   ];
 
   return (
-    <section
+    <>
+      <section
       id="projects"
-      className="bg-gray-100 text-neutral-900 dark:bg-black dark:text-white py-16 px-4 transition-colors duration-300"
+      className="bg-gray-100 text-neutral-900 dark:bg-black dark:text-white px-4 pt-16
+"
     >
-      <h2 className="max-w-6xl mx-auto text-2xl font-bold md:text-3xl lg:text-4xl mb-12">
+      <h2 className="max-w-6xl mx-auto text-2xl font-bold md:text-3xl lg:text-4xl mb-10">
         My Projects 🧑‍💻
       </h2>
 
-      <div className="max-w-6xl mx-auto space-y-20">
+      <div className="max-w-6xl mx-auto space-y-8 md:space-y-24">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -172,7 +175,15 @@ export default function Project() {
           </div>
         ))}
       </div>
+      <center>
+<Button variant="outline" className="mt-12 md:mt-16 justify-center rounded-full" onClick={() => window.location.href = "/about"}>
+      More about me <ArrowUpRight size={16} />
+    </Button>
+    </center>
     </section>
+    
+    
+    </>
   );
 }
 
