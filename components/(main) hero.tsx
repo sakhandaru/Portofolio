@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { WordRotate } from "@/components/ux/word-rotate";
-import { ConfettiButton } from "./ux/confetti";
 import PhotoCircle from "./photo-circle";
 import StickerBounce from "@/components/ui/StickerPeel"; // Pastikan path ini benar
 
@@ -166,18 +165,17 @@ export default function Hero() {
             </h1>
             
           </div>
-          <ConfettiButton>
+          
             <WordRotate
               className="text-2xl text-black dark:text-neutral-300 mt-4"
               words={[
                 "Welcome 🙌",
-                "Scroll now 👇",
                 "scroll slowly 🐢",
-                "click me 🤪",
                 "drag the sticker 🏷️",
+                "mewing 🤫🧏‍♂️"
               ]}
             />
-          </ConfettiButton>
+        
         </div>
         
       </section>
