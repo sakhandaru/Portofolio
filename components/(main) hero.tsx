@@ -45,15 +45,15 @@ export default function Hero() {
     setStickerPositions({
       stickerAtas: { 
         x: 0,
-        y: - 250
+        y: - 700
       },
       stickerBawah: { 
         x: 0,
-        y: -250
+        y: -200
       },
       stickerTengah: {
         x: 0,
-        y: -250
+        y: 150
       }
     });
   } else if (769 <= window.innerWidth && window.innerWidth <= 1024) {
