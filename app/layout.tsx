@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import SideNavbar from "@/components/side-navbar";
 import { Raleway, Montserrat } from 'next/font/google';
 import './globals.css'; // Pastikan file CSS global Anda diimpor
+import IntroLoader from "@/components/intro";
 
 // Konfigurasi untuk Raleway (Judul)
 const raleway = Raleway({
@@ -41,7 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${raleway.variable} ${montserrat.variable} ${geistMono.variable} antialiased`}
-      >
+      ><IntroLoader>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -51,6 +52,7 @@ export default function RootLayout({
             <SideNavbar />
             {children}
           </ThemeProvider>
+          </IntroLoader>
       </body>
     </html>
   );
