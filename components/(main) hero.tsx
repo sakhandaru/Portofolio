@@ -14,10 +14,11 @@ export default function Hero() {
 
   // State untuk menyimpan posisi stiker, awalnya null agar tidak error di server
   const [stickerPositions, setStickerPositions] = useState<{
-    stickerBawah: { x: number; y: number } | null;
-    stickerAtas: { x: number; y: number } | null;
-    stickerTengah: { x: number; y: number } | null;
-  }>({ stickerBawah: null, stickerAtas: null, stickerTengah: null });
+    stickerDua: { x: number; y: number } | null;
+    stickerSatu: { x: number; y: number } | null;
+    stickerTiga: { x: number; y: number } | null;
+    stickerEmpat: { x: number; y: number } | null;
+  }>({ stickerDua: null, stickerSatu: null, stickerTiga: null, stickerEmpat: null });
 
   // Efek untuk ScrollTrigger (tidak diubah)
   useEffect(() => {
@@ -42,65 +43,81 @@ export default function Hero() {
   if (window.innerWidth <= 768) {
     // MOBILE
     setStickerPositions({
-      stickerAtas: { 
+      stickerSatu: { 
         x: 0,
         y: - 700
       },
-      stickerBawah: { 
+      stickerDua: { 
         x: 0,
         y: -200
       },
-      stickerTengah: {
+      stickerTiga: {
         x: 0,
         y: 150
+      },
+      stickerEmpat: {
+        x: 0,
+        y: -700
       }
     });
   } else if (769 <= window.innerWidth && window.innerWidth <= 1024) {
     // TABLET
     setStickerPositions({
-      stickerAtas: { 
+      stickerSatu: { 
         x: -350, 
         y: -200 
       },
-      stickerBawah: { 
+      stickerDua: { 
         x: 400, 
         y: 200 
       },
-      stickerTengah: {
+      stickerTiga: {
         x: -350,
         y: 200
+      },
+      stickerEmpat: {
+        x: 350,
+        y: -200
       }
     });
   } else if (1025 <= window.innerWidth && window.innerWidth <= 1440) {
     // DESKTOP KECIL
     setStickerPositions({
-      stickerAtas: { 
+      stickerSatu: { 
         x: -350, 
         y: -200 
       },
-      stickerBawah: { 
+      stickerDua: { 
         x: 400, 
         y: 200 
       },
-      stickerTengah: {
+      stickerTiga: {
         x: -350,
         y: 200
+      },
+      stickerEmpat: {
+        x: 370,
+        y: -200
       }
     });
   } else {
     // DESKTOP BESAR
     setStickerPositions({
-      stickerAtas: { 
+      stickerSatu: { 
         x: -350, 
         y: -200
       },
-      stickerBawah: { 
+      stickerDua: { 
         x: 400, 
         y: 200
       },
-      stickerTengah: {
+      stickerTiga: {
         x: -350,
         y: 200
+      },
+      stickerEmpat: {
+        x: 370,
+        y: -200
       }
     });
   }
@@ -124,30 +141,38 @@ export default function Hero() {
         ref={heroRef}
         className="w-full min-h-screen flex items-center justify-center bg-white dark:bg-[#121212] py-32 md:py-48 relative overflow-hidden" // Tambahkan overflow-hidden
       >
-        {/* Render stiker kanan atas secara kondisional dengan posisi dari state */}
-        {stickerPositions.stickerBawah && (
+        {/* Render stiker kanan Satu secara kondisional dengan posisi dari state */}
+        {stickerPositions.stickerDua && (
           <StickerBounce
             imageSrc="/sticker2.svg"
             width={350}
-            initialPosition={stickerPositions.stickerBawah} // <-- MENGGUNAKAN STATE
+            initialPosition={stickerPositions.stickerDua} // <-- MENGGUNAKAN STATE
             className="z-11"
           />
         )}
 
-        {/* Render stiker kiri bawah secara kondisional dengan posisi dari state */}
-        {stickerPositions.stickerAtas && (
+        {/* Render stiker kiri Dua secara kondisional dengan posisi dari state */}
+        {stickerPositions.stickerSatu && (
           <StickerBounce
             imageSrc="/sticker1.svg"
             width={350}
-            initialPosition={stickerPositions.stickerAtas} // <-- MENGGUNAKAN STATE
+            initialPosition={stickerPositions.stickerSatu} // <-- MENGGUNAKAN STATE
             className="z-10"
           />
         )}
-        {stickerPositions.stickerTengah && (
+        {stickerPositions.stickerTiga && (
           <StickerBounce
             imageSrc="/sticker3.svg"
             width={350}
-            initialPosition={stickerPositions.stickerTengah} // <-- MENGGUNAKAN STATE2
+            initialPosition={stickerPositions.stickerTiga} // <-- MENGGUNAKAN STATE2
+            className="z-12"
+          />
+        )}
+        {stickerPositions.stickerTiga && (
+          <StickerBounce
+            imageSrc="/sticker4.svg"
+            width={350}
+            initialPosition={stickerPositions.stickerEmpat || undefined} // <-- MENGGUNAKAN STATE2
             className="z-12"
           />
         )}
