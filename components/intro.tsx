@@ -13,8 +13,8 @@ export default function IntroLoader({ children }: { children: React.ReactNode })
       return;
     }
 
-    const start = 1;
-    const end = 10;
+    const start = 10;
+    const end = 1;
     const duration = 3000; // 5 detik
     const stepTime = duration / (end - start);
     let current = start;

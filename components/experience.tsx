@@ -146,7 +146,7 @@ export function MarqueeDemo() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-gray-100 to-transparent dark:from-black"></div>
       </div>
       <center>
-        <Button variant="outline" className="mb-6 rounded-full" onClick={() => window.location.href = "/about"}>
+        <Button variant="outline" className="mb-6 rounded-full" onClick={() => window.location.href = "/About"}>
           More about me <ArrowUpRight size={16} />
       </Button>
       </center>

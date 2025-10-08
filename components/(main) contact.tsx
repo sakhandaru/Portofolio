@@ -44,7 +44,7 @@ export default function ContactSection() {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex flex-wrap justify-center gap-3">
+        {/* <div className="flex flex-wrap justify-center gap-3">
           <SocialIcon
             icon={<FaWhatsapp size={18} />}
             link="https://wa.me/+6287716632356"
@@ -65,7 +65,6 @@ export default function ContactSection() {
             icon={<FaGitlab size={18} />}
             link="https://gitlab.com/sakhandaru"
           />
-        </div>
 
         {/* Location & Year */}
         <div className="text-center sm:text-right">

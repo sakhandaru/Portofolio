@@ -27,7 +27,7 @@ export default function Navbar() {
     { href: "/#hero", icon: <Home size={22} />, label: "Home" },
     { href: "/#about", icon: <User size={22} />, label: "About" },
     { href: "/#projects", icon: <FolderGit2 size={22} />, label: "Projects" },
-    { href: "/#contact", icon: <Mail size={22} />, label: "Contact" },
+    // { href: "/#contact", icon: <Mail size={22} />, label: "Contact" },
   ];
 
   const socialLinks = [
