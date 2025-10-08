@@ -1,3 +1,4 @@
+
 import { About } from "@/components/(main) about";
 import { SmoothCursor } from "@/components/ux/smooth-cursor";
 import { ScrollProgress } from "@/components/ux/scroll-progress";
